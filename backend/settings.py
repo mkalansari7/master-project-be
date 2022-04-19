@@ -28,6 +28,8 @@ SECRET_KEY = 'django-insecure-r%torka=6az(1sl9s==y)a0&3y6b_2s%=xb^!35wsk7&&0$pmo
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+APPEND_SLASH = False
+
 ALLOWED_HOSTS = []
 
 
@@ -44,6 +46,7 @@ INSTALLED_APPS = [
     'djoser',
     'corsheaders',
     'semesters',
+    'projects'
 ]
 
 MIDDLEWARE = [
