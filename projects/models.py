@@ -5,4 +5,5 @@ from semesters.models import Semester
 # Create your models here.
 class Project(models.Model):
     name = models.CharField(max_length=255)
-    semester = models.ForeignKey(Semester, on_delete=models.CASCADE, related_name='project', null = True)
+    wieght = models.IntegerField()
+    semester = models.ForeignKey(Semester, on_delete=models.CASCADE, related_name='project')
