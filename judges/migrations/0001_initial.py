@@ -9,19 +9,17 @@ class Migration(migrations.Migration):
     initial = True
 
     dependencies = [
-        ('semesters', '0001_initial'),
-        ('criterias', '0001_initial'),
+        ('evaluations', '0001_initial'),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='Project',
+            name='Judge',
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('name', models.CharField(max_length=255)),
-                ('weight', models.IntegerField()),
-                ('criteria', models.ManyToManyField(to='criterias.criteria')),
-                ('semester', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='project', to='semesters.semester')),
+                ('grade', models.JSONField(blank=True, null=True)),
+                ('evaluation', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='judge', to='evaluations.evaluation')),
             ],
         ),
     ]
