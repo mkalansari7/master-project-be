@@ -49,7 +49,7 @@ INSTALLED_APPS = [
     'projects',
     'teams',
     'criterias',
-    'evaluations'
+    'evaluations',
     'judges',
 ]
 
